@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:provider/provider.dart';
 import 'package:toxicity_test/data/someappdata.dart';
+import 'package:toxicity_test/providers/search_screen_provider.dart';
 
 class SearchScreen extends StatelessWidget {
   SearchScreen({required this.title});
@@ -35,65 +37,75 @@ class SearchScreen extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.all(15),
-                child: Container(
-                    width: MediaQuery.of(context).size.width * .75,
-                    height: 60,
-                    child: TypeAheadFormField<String>(
-                        suggestionsBoxController: su,
-                        textFieldConfiguration: TextFieldConfiguration(
-                          controller: editingController,
-                          style: TextStyle(
-                              color: Colors.amber, fontWeight: FontWeight.bold),
-                          decoration: InputDecoration(
-                              fillColor: Colors.blueGrey.shade900,
-                              filled: true,
-                              suffixIcon: InkWell(
-                                onTap: () {
-                                  print('Searching');
-
-                                  su.close();
-                                },
-                                child: Icon(
-                                  FontAwesomeIcons.search,
-                                  color: Colors.white,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Container(
+                        width: MediaQuery.of(context).size.width * .70,
+                        height: 50,
+                        child: TypeAheadFormField<String>(
+                            suggestionsBoxController: su,
+                            textFieldConfiguration: TextFieldConfiguration(
+                                cursorColor: Colors.white,
+                                controller: editingController,
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold),
+                                decoration: InputDecoration(
+                                  focusColor: Colors.blueGrey.shade300,
+                                  fillColor: Colors.blueGrey.shade300,
+                                  filled: true,
+                                )),
+                            onSuggestionSelected: (vl) {
+                              editingController.text = vl;
+                            },
+                            itemBuilder: (_, str) {
+                              return Container(
+                                color: Colors.black54,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Text(
+                                        str,
+                                        style: TextStyle(fontSize: 18),
+                                      ),
+                                    ),
+                                    Divider()
+                                  ],
                                 ),
-                              )),
-                        ),
-                        onSuggestionSelected: (vl) {
-                          editingController.text = vl;
+                              );
+                            },
+                            suggestionsCallback: (st) {
+                              return Drug().getDrugsName(st);
+                            })),
+                    ElevatedButton.icon(
+                        style: ElevatedButton.styleFrom(
+                            primary: Colors.white, elevation: 0),
+                        label: Text(''),
+                        onPressed: () {
+                          context.read<SearchScreenProvider>().addSearchResult(
+                              Drug()
+                                  .getDrugInfoFromName(editingController.text));
                         },
-                        itemBuilder: (_, str) {
-                          return Container(
-                            color: Colors.black54,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Text(
-                                    str,
-                                    style: TextStyle(fontSize: 18),
-                                  ),
-                                ),
-                                Divider()
-                              ],
-                            ),
-                          );
-                        },
-                        suggestionsCallback: (st) {
-                          return Durg().getDrugsName(st);
-                        })),
+                        icon: Icon(
+                          FontAwesomeIcons.search,
+                          color: Colors.black,
+                        )),
+                  ],
+                ),
               ),
               Container(
-                width: double.infinity,
-                height: MediaQuery.of(context).size.height * .73,
-                color: Colors.black26,
-                child: Center(
-                    child: Text(
-                  'Search result',
-                  style: TextStyle(fontSize: 22),
-                )),
-              )
+                  height: MediaQuery.of(context).size.height * .74,
+                  width: double.infinity,
+                  color: Colors.black26,
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children:
+                          context.watch<SearchScreenProvider>().searchBody,
+                    ),
+                  ))
             ],
           ),
         ),
