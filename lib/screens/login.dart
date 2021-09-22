@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:toxicity_test/screens/sign.dart';
 import 'package:toxicity_test/screens/start_screen.dart';
+import 'forget_pass.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
@@ -72,12 +73,25 @@ class LoginScreen extends StatelessWidget {
                     ),
                     Container(
                       alignment: Alignment.bottomRight,
-                      child: Text(
-                        'forget password?',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 15,
+                      child: ElevatedButton(
+                        child: Text(
+                          'Forget Password?',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 15,
+                          ),
                         ),
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.white,
+                          elevation: 20,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(25),
+                          ),
+                        ),
+                        onPressed: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (_) => ForgotPassword()));
+                        },
                       ),
                     ),
                     SizedBox(
@@ -88,10 +102,12 @@ class LoginScreen extends StatelessWidget {
                       width: 200,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                            primary: Colors.white,
-                            elevation: 20,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(25))),
+                          primary: Colors.white,
+                          elevation: 20,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(25),
+                          ),
+                        ),
                         //color: Color.fromRGBO(83, 184, 187, 1),
                         onPressed: () {
                           Navigator.of(context).push(
