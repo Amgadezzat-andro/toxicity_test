@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:toxicity_test/screens/sign.dart';
 import 'package:toxicity_test/screens/start_screen.dart';
 
+// edit the firebase
 class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
