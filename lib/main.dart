@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         title: 'Toxicity Test',
+        debugShowCheckedModeBanner: false,
         home: MyHomePage(),
       ),
     );
