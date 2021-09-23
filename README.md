@@ -2,6 +2,9 @@
 
 BioInformatics Grad Project 2022 
 Mesure toxicity of materials 
+Authentication System Made With Firebase
+with features like ( auto login with token & expiry date - login - signup )
++ HTTP validation function 
 
 
 ![image](https://user-images.githubusercontent.com/52012518/134420140-e682a11b-1365-4494-a0fc-bb7567918dad.png)
