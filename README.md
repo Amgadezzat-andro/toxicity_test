@@ -1,6 +1,6 @@
 # toxicity_test
 
-BioInformatics Grad Project 2022\n 
+BioInformatics Grad Project 2022. 
 Mesure toxicity of materials 
 Authentication System Made With Firebase
 with features like ( auto login with token & expiry date - login - signup )
