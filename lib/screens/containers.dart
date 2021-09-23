@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:toxicity_test/screens/structures.dart';
 
 class BuildList extends StatelessWidget {
   @override
@@ -8,9 +9,14 @@ class BuildList extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        leading: Icon(
-          FontAwesomeIcons.arrowLeft,
-          color: Colors.black,
+        leading: IconButton(
+          icon: Icon(
+            FontAwesomeIcons.arrowLeft,
+            color: Colors.black,
+          ),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
         ),
         backgroundColor: Colors.white,
         title: Text(
