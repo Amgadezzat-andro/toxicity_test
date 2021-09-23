@@ -37,46 +37,13 @@ class BuildList extends StatelessWidget {
                 'Cramer rules',
               ),
               BuildContainer(
-                'Extended Cramer rules',
-              ),
-              BuildContainer(
-                'Revised Cramer Decision Tree',
-              ),
-              BuildContainer(
-                'Varhaar scheme for predicting toxicity mode of action',
-              ),
-              BuildContainer(
-                'Varhaar scheme (modified) for predicting toxicity mode of action',
-              ),
-              BuildContainer(
                 'Eye irritation',
-              ),
-              BuildContainer(
-                'Skin irritatoin',
-              ),
-              BuildContainer(
-                'Structure Alerts for the in vivo micronucleus assay in rodents',
-              ),
-              BuildContainer(
-                'Skin sensitisation alerts (M. Cronin)',
               ),
               BuildContainer(
                 'DNA binding',
               ),
               BuildContainer(
                 'Protein binding',
-              ),
-              BuildContainer(
-                'Michael acceptors',
-              ),
-              BuildContainer(
-                'Begin/Bossa rules for carcinogenicity and mutagenicity',
-              ),
-              BuildContainer(
-                'In vitro mutagenicity (Ames test) alerts by ISS',
-              ),
-              BuildContainer(
-                'ILSI/Kroes decision tree for TTC',
               ),
             ],
           ),
