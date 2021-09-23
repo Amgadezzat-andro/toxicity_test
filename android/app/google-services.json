@@ -1,0 +1,39 @@
+{
+    "project_info": {
+      "project_number": "80851910090",
+      "project_id": "toxicity-test-efbfa",
+      "storage_bucket": "toxicity-test-efbfa.appspot.com"
+    },
+    "client": [
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:80851910090:android:836cfa8e0113760f92a333",
+          "android_client_info": {
+            "package_name": "com.example.toxicity_test"
+          }
+        },
+        "oauth_client": [
+          {
+            "client_id": "80851910090-bg1m9e4letlsngf6hec970tic7pv8qqu.apps.googleusercontent.com",
+            "client_type": 3
+          }
+        ],
+        "api_key": [
+          {
+            "current_key": "AIzaSyCvr46sV7Ud5kObTFH45qMWbmcYKzLuoYY"
+          }
+        ],
+        "services": {
+          "appinvite_service": {
+            "other_platform_oauth_client": [
+              {
+                "client_id": "80851910090-bg1m9e4letlsngf6hec970tic7pv8qqu.apps.googleusercontent.com",
+                "client_type": 3
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "configuration_version": "1"
+  }

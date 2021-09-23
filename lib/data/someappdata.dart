@@ -15,7 +15,7 @@ class Drug {
       'structure_diagram': AssetImage('assets/img/h2so4.png')
     }
   ];
-  List<Map>? getDrugInfo() => _infos;
+  List<Map> getDrugInfo() => _infos;
   Map<dynamic, dynamic> getDrugInfoFromName(String drugName) => _infos
       .where((element) => element['drugName'] == drugName)
       .toList()

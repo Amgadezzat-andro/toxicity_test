@@ -83,7 +83,7 @@ class BuildList extends StatelessWidget {
 // ignore: must_be_immutable
 class BuildContainer extends StatefulWidget {
   BuildContainer(this.title);
-  String? title;
+  String title;
   @override
   State<StatefulWidget> createState() {
     return _BuildContainer();
@@ -115,7 +115,7 @@ class _BuildContainer extends State<BuildContainer> {
                 child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Text(
-                      widget.title!,
+                      widget.title,
                       overflow: TextOverflow.fade,
                       style: TextStyle(
                         fontSize: 20,

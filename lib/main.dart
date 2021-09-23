@@ -1,6 +1,7 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:toxicity_test/providers/auth.dart';
 import 'package:toxicity_test/providers/drop_down_container_provider.dart';
 import 'package:toxicity_test/providers/search_screen_provider.dart';
 import 'package:toxicity_test/screens/login.dart';
@@ -17,9 +18,12 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider<SearchScreenProvider>(
-            create: (_) => SearchScreenProvider()),
+          create: (_) => SearchScreenProvider(),
+        ),
         ChangeNotifierProvider<DropDownContainerProvider>(
-            create: (_) => DropDownContainerProvider())
+          create: (_) => DropDownContainerProvider(),
+        ),
+         ChangeNotifierProvider.value(value: Auth()),
       ],
       child: MaterialApp(
         title: 'Toxicity Test',
@@ -31,8 +35,6 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key}) : super(key: key);
-
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -47,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
       nextScreen: LoginScreen(),
       splashTransition: SplashTransition.fadeTransition,
       pageTransitionType: PageTransitionType.bottomToTop,
-      backgroundColor: Colors.grey[100]!,
+      backgroundColor: Colors.grey[100],
     );
   }
 }

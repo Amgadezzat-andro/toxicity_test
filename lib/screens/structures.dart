@@ -4,8 +4,8 @@ import 'containers.dart';
 
 class StructureAttribScreen extends StatelessWidget {
   StructureAttribScreen({this.drugName, this.imgUrl});
-  String? drugName;
-  AssetImage? imgUrl;
+  String drugName;
+  AssetImage imgUrl;
   @override
   Widget build(BuildContext context) {
     var padHight = MediaQuery.of(context).size.height * .15;
@@ -60,7 +60,7 @@ class StructureAttribScreen extends StatelessWidget {
               padding: const EdgeInsets.all(30),
               child: Image(
                   height: MediaQuery.of(context).size.height * .25,
-                  image: imgUrl!),
+                  image: imgUrl),
             ),
             SizedBox(
               height: padHight,
