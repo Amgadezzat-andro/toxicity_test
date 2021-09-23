@@ -6,6 +6,7 @@ import 'package:toxicity_test/providers/drop_down_container_provider.dart';
 import 'package:toxicity_test/providers/search_screen_provider.dart';
 import 'package:toxicity_test/screens/login.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:toxicity_test/screens/start_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -46,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
       duration: 3000,
       splash: "assets/img/logo.png",
       splashIconSize: double.infinity,
-      nextScreen: LoginScreen(),
+      nextScreen: StartScreen(),
       splashTransition: SplashTransition.fadeTransition,
       pageTransitionType: PageTransitionType.bottomToTop,
       backgroundColor: Colors.grey[100],
