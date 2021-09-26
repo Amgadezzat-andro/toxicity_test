@@ -1,11 +1,13 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 
 import 'containers.dart';
 
 class StructureAttribScreen extends StatelessWidget {
   StructureAttribScreen({this.drugName, this.imgUrl});
-  String? drugName;
-  AssetImage? imgUrl;
+  String drugName;
+  AssetImage imgUrl;
   @override
   Widget build(BuildContext context) {
     var padHight = MediaQuery.of(context).size.height * .15;
@@ -60,7 +62,7 @@ class StructureAttribScreen extends StatelessWidget {
               padding: const EdgeInsets.all(30),
               child: Image(
                   height: MediaQuery.of(context).size.height * .25,
-                  image: imgUrl!),
+                  image: imgUrl),
             ),
             SizedBox(
               height: padHight,
@@ -86,9 +88,14 @@ class StructureAttribScreen extends StatelessWidget {
                       Navigator.of(context).push(
                           MaterialPageRoute(builder: (context) => BuildList()));
                     },
-                    icon: Icon(
-                      Icons.arrow_forward,
-                      size: 30,
+                    icon: Container(
+                      width: 70,
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle, color: Colors.black45),
+                      child: Icon(
+                        Icons.arrow_forward,
+                        size: 24,
+                      ),
                     ),
                   ),
                 ],

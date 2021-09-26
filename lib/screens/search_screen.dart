@@ -6,9 +6,10 @@ import 'package:provider/provider.dart';
 import 'package:toxicity_test/data/someappdata.dart';
 import 'package:toxicity_test/providers/search_screen_provider.dart';
 
+// ignore: must_be_immutable
 class SearchScreen extends StatelessWidget {
-  SearchScreen({required this.title});
-  String? title;
+  SearchScreen({this.title});
+  String title;
   TextEditingController editingController = new TextEditingController();
   SuggestionsBoxController su = new SuggestionsBoxController();
   @override
@@ -19,11 +20,13 @@ class SearchScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0,
         centerTitle: true,
-        leading: Image(
-          image: AssetImage('assets/img/logo.png'),
-        ),
+        actions: [
+          Image(
+            image: AssetImage('assets/img/logo.png'),
+          ),
+        ],
         title: Text(
-          title!,
+          title,
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         ),
       ),
