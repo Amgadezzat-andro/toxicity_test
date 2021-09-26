@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:toxicity_test/screens/sign.dart';
 import 'package:toxicity_test/screens/start_screen.dart';
 import 'package:provider/provider.dart';
@@ -170,9 +171,11 @@ class _LoginScreenState extends State<LoginScreen> {
                                     },
                                     child: Icon(
                                       isPasswordShown
-                                          ? Icons.local_activity
-                                          : Icons.remove_red_eye_outlined,
-                                      color: Colors.grey,
+                                          ? FontAwesomeIcons.eyeSlash
+                                          : FontAwesomeIcons.eye,
+                                      color: isPasswordShown
+                                          ? Colors.redAccent.shade200
+                                          : Colors.greenAccent.shade200,
                                     ),
                                   ),
                                 ),
@@ -192,6 +195,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                             Container(
                               alignment: Alignment.bottomRight,
+                              padding: EdgeInsets.only(top: 10),
                               child: ElevatedButton(
                                 child: Text(
                                   'Forget Password?',
@@ -202,7 +206,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ),
                                 style: ElevatedButton.styleFrom(
                                   primary: Colors.white,
-                                  elevation: 20,
+                                  elevation: 5,
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(25),
                                   ),

@@ -2,7 +2,6 @@ import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:toxicity_test/providers/auth.dart';
-import 'package:toxicity_test/providers/drop_down_container_provider.dart';
 import 'package:toxicity_test/providers/search_screen_provider.dart';
 
 import 'package:page_transition/page_transition.dart';
@@ -20,9 +19,6 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider<SearchScreenProvider>(
           create: (_) => SearchScreenProvider(),
-        ),
-        ChangeNotifierProvider<DropDownContainerProvider>(
-          create: (_) => DropDownContainerProvider(),
         ),
         ChangeNotifierProvider.value(value: Auth()),
       ],

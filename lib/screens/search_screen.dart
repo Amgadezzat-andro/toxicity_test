@@ -20,11 +20,14 @@ class SearchScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0,
         centerTitle: true,
-        actions: [
-          Image(
+        leading: InkWell(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Image(
             image: AssetImage('assets/img/logo.png'),
           ),
-        ],
+        ),
         title: Text(
           title,
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
