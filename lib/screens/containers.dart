@@ -118,7 +118,9 @@ class BuildList extends StatelessWidget {
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
-                                  SizedBox(width: 70,),
+                                  SizedBox(
+                                    width: 70,
+                                  ),
                                   Text(
                                     'No',
                                     style: TextStyle(
@@ -138,7 +140,9 @@ class BuildList extends StatelessWidget {
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
-                                  SizedBox(width: 70,),
+                                  SizedBox(
+                                    width: 70,
+                                  ),
                                   Text(
                                     'No',
                                     style: TextStyle(
@@ -158,7 +162,9 @@ class BuildList extends StatelessWidget {
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
-                                  SizedBox(width: 70,),
+                                  SizedBox(
+                                    width: 70,
+                                  ),
                                   Text(
                                     'YES',
                                     style: TextStyle(
@@ -178,7 +184,9 @@ class BuildList extends StatelessWidget {
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
-                                  SizedBox(width: 70,),
+                                  SizedBox(
+                                    width: 70,
+                                  ),
                                   Text(
                                     'No',
                                     style: TextStyle(
@@ -186,7 +194,6 @@ class BuildList extends StatelessWidget {
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
-                                  
                                 ],
                               ),
                               Divider(),
@@ -205,9 +212,736 @@ class BuildList extends StatelessWidget {
                   ),
                 ),
               ),
-              BuildContainer('Eye irritation', 'sdfsdafsadfsdaf'),
-              BuildContainer('DNA binding', 'aSDASDASD'),
-              BuildContainer('Protein binding', '213213'),
+              Padding(
+                padding: const EdgeInsets.all(10),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(15),
+                  child: Container(
+                    color: Colors.blueGrey.shade900,
+                    child: ExpansionTile(
+                      iconColor: Colors.amber,
+                      expandedCrossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(right: 10, left: 5),
+                          child: Row(
+                            children: [
+                              Icon(
+                                FontAwesomeIcons.vial,
+                                color: Colors.amber,
+                              ),
+                              Expanded(
+                                child: Divider(
+                                  color: Colors.amber,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              left: 10, bottom: 10, top: 5),
+                          child: Column(
+                            children: [
+                              Center(
+                                child: Container(
+                                  height: 30,
+                                  width: 300,
+                                  alignment: Alignment.center,
+                                  color: Colors.yellow,
+                                  child: Text(
+                                    'UNKNOWN',
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                              ),
+                              Divider(),
+                              Center(
+                                child: Container(
+                                  height: 30,
+                                  width: 300,
+                                  alignment: Alignment.center,
+                                  color: Colors.green,
+                                  child: Text(
+                                    'NOT corrosion R34, R35 or R41',
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                              ),
+                              Divider(),
+                              Center(
+                                child: Container(
+                                  height: 30,
+                                  width: 300,
+                                  alignment: Alignment.center,
+                                  color: Colors.green,
+                                  child: Text(
+                                    'NOT eye irritation R36',
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                              ),
+                              Divider(),
+                              Center(
+                                child: Container(
+                                  height: 30,
+                                  width: 300,
+                                  alignment: Alignment.center,
+                                  color: Colors.red,
+                                  child: Text(
+                                    'Moderate reversable irritation to the eye',
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                              ),
+                              Divider(),
+                              Center(
+                                child: Container(
+                                  height: 30,
+                                  width: 300,
+                                  alignment: Alignment.center,
+                                  color: Colors.red,
+                                  child: Text(
+                                    'Serious lesions to the eye',
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                              ),
+                              Divider(),
+                              Center(
+                                child: Container(
+                                  height: 30,
+                                  width: 300,
+                                  alignment: Alignment.center,
+                                  color: Colors.red,
+                                  child: Text(
+                                    'Skin corrosion',
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                              ),
+                              Divider(),
+                              Row(
+                                children: [
+                                  Text(
+                                    'Q1.Melting Point[℃] > 200',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 70,
+                                  ),
+                                  Text(
+                                    'No',
+                                    style: TextStyle(
+                                      color: Colors.green,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Divider(),
+                              Row(
+                                children: [
+                                  Text(
+                                    'Q2.LogP>9.0 ',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 70,
+                                  ),
+                                  Text(
+                                    'No',
+                                    style: TextStyle(
+                                      color: Colors.green,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Divider(),
+                              Row(
+                                children: [
+                                  Text(
+                                    'Q3.LogP<-3.1 ',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 70,
+                                  ),
+                                  Text(
+                                    'No',
+                                    style: TextStyle(
+                                      color: Colors.green,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Divider(),
+                              Row(
+                                children: [
+                                  Text(
+                                    'Q4.Lipid Solubility<0.01',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 70,
+                                  ),
+                                  Text(
+                                    'No',
+                                    style: TextStyle(
+                                      color: Colors.green,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Divider(),
+                              Row(
+                                children: [
+                                  Text(
+                                    'Q5.Water Solubility<5.0E-6 ',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 70,
+                                  ),
+                                  Text(
+                                    'No',
+                                    style: TextStyle(
+                                      color: Colors.green,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Divider(),
+                            ],
+                          ),
+                        )
+                      ],
+                      textColor: Colors.white,
+                      title: Text(
+                        'Eye Irretation',
+                        style: TextStyle(fontSize: 24, color: Colors.white),
+                      ),
+                      collapsedIconColor: Colors.white,
+                      backgroundColor: Colors.blueGrey.shade900,
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(15),
+                  child: Container(
+                    color: Colors.blueGrey.shade900,
+                    child: ExpansionTile(
+                      iconColor: Colors.amber,
+                      expandedCrossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(right: 10, left: 5),
+                          child: Row(
+                            children: [
+                              Icon(
+                                FontAwesomeIcons.vial,
+                                color: Colors.amber,
+                              ),
+                              Expanded(
+                                child: Divider(
+                                  color: Colors.amber,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              left: 10, bottom: 10, top: 5),
+                          child: Column(
+                            children: [
+                              Center(
+                                child: Container(
+                                  height: 30,
+                                  width: 300,
+                                  alignment: Alignment.center,
+                                  color: Colors.yellow,
+                                  child: Text(
+                                    'Alert for SN1 Identified.: NO',
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                              ),
+                              Divider(),
+                              Center(
+                                child: Container(
+                                  height: 40,
+                                  width: 300,
+                                  alignment: Alignment.center,
+                                  color: Colors.yellow,
+                                  child: Text(
+                                    'Alert for Schiff base formation  identified.: NO',
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                              ),
+                              Divider(),
+                              Center(
+                                child: Container(
+                                  height: 30,
+                                  width: 300,
+                                  alignment: Alignment.center,
+                                  color: Colors.red,
+                                  child: Text(
+                                    'Alert for Michael Acceptor identified.: YES',
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                              ),
+                              Divider(),
+                              Center(
+                                child: Container(
+                                  height: 40,
+                                  width: 300,
+                                  alignment: Alignment.center,
+                                  color: Colors.red,
+                                  child: Text(
+                                    'Alert for Acyl Transfer agent identified.: YES',
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                              ),
+                              Divider(),
+                              Row(
+                                children: [
+                                  Text(
+                                    'QSN1.SN1',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 70,
+                                  ),
+                                  Text(
+                                    'No',
+                                    style: TextStyle(
+                                      color: Colors.green,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Divider(),
+                              Row(
+                                children: [
+                                  Text(
+                                    'QSB.Schiff Base Formation',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 70,
+                                  ),
+                                  Text(
+                                    'No',
+                                    style: TextStyle(
+                                      color: Colors.green,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Divider(),
+                              Row(
+                                children: [
+                                  Text(
+                                    'Q3.MA.Michael Acceptor ',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 70,
+                                  ),
+                                  Text(
+                                    'YES',
+                                    style: TextStyle(
+                                      color: Colors.red,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Divider(),
+                              Row(
+                                children: [
+                                  Text(
+                                    'Q4.1acyl.Acyl Transfer Agents',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 70,
+                                  ),
+                                  Text(
+                                    'YES',
+                                    style: TextStyle(
+                                      color: Colors.red,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Divider(),
+                              Row(
+                                children: [
+                                  Text(
+                                    'Q5.QSN2.SN2-Nucleophilic \nAliphatic Substitution',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 70,
+                                  ),
+                                  Text(
+                                    'No',
+                                    style: TextStyle(
+                                      color: Colors.green,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Divider(),
+                              Row(
+                                children: [
+                                  Text(
+                                    'Q6.At least one alert \nfor DNA binding?',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 70,
+                                  ),
+                                  Text(
+                                    'YES',
+                                    style: TextStyle(
+                                      color: Colors.red,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Divider(),
+                            ],
+                          ),
+                        )
+                      ],
+                      textColor: Colors.white,
+                      title: Text(
+                        'DNA Binding',
+                        style: TextStyle(fontSize: 24, color: Colors.white),
+                      ),
+                      collapsedIconColor: Colors.white,
+                      backgroundColor: Colors.blueGrey.shade900,
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(15),
+                  child: Container(
+                    color: Colors.blueGrey.shade900,
+                    child: ExpansionTile(
+                      iconColor: Colors.amber,
+                      expandedCrossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(right: 10, left: 5),
+                          child: Row(
+                            children: [
+                              Icon(
+                                FontAwesomeIcons.vial,
+                                color: Colors.amber,
+                              ),
+                              Expanded(
+                                child: Divider(
+                                  color: Colors.amber,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              left: 10, bottom: 10, top: 5),
+                          child: Column(
+                            children: [
+                              Center(
+                                child: Container(
+                                  height: 30,
+                                  width: 300,
+                                  alignment: Alignment.center,
+                                  color: Colors.yellow,
+                                  child: Text(
+                                    'Alert for SNAr Identified.: NO',
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                              ),
+                              Divider(),
+                              Center(
+                                child: Container(
+                                  height: 40,
+                                  width: 300,
+                                  alignment: Alignment.center,
+                                  color: Colors.yellow,
+                                  child: Text(
+                                    'Alert for Michael Acceptor identified.: NO',
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                              ),
+                              Divider(),
+                              Center(
+                                child: Container(
+                                  height: 40,
+                                  width: 300,
+                                  alignment: Alignment.center,
+                                  color: Colors.yellow,
+                                  child: Text(
+                                    'Alert for Schiff base formation  identified.: NO',
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                              ),
+                              Divider(),
+                              Center(
+                                child: Container(
+                                  height: 30,
+                                  width: 300,
+                                  alignment: Alignment.center,
+                                  color: Colors.red,
+                                  child: Text(
+                                    'Alert for SN2 identified.: YES',
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                              ),
+                              Divider(),
+                              Center(
+                                child: Container(
+                                  height: 40,
+                                  width: 300,
+                                  alignment: Alignment.center,
+                                  color: Colors.red,
+                                  child: Text(
+                                    'Alert for Acyl Transfer agent identified.: YES',
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                              ),
+                              Divider(),
+                              Center(
+                                child: Container(
+                                  height: 40,
+                                  width: 300,
+                                  alignment: Alignment.center,
+                                  color: Colors.red,
+                                  child: Text(
+                                    'No protein binding alerts identified.: NO',
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                              ),
+                              Divider(),
+                              Row(
+                                children: [
+                                  Text(
+                                    'QSNAR.SNAr-Nucleophilic \nAromatic Substitution',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 70,
+                                  ),
+                                  Text(
+                                    'No',
+                                    style: TextStyle(
+                                      color: Colors.green,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Divider(),
+                              Row(
+                                children: [
+                                  Text(
+                                    'QSB.Schiff Base Formation ',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 70,
+                                  ),
+                                  Text(
+                                    'No',
+                                    style: TextStyle(
+                                      color: Colors.green,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Divider(),
+                              Row(
+                                children: [
+                                  Text(
+                                    'QMA.Michael Acceptor  ',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 70,
+                                  ),
+                                  Text(
+                                    'No',
+                                    style: TextStyle(
+                                      color: Colors.green,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Divider(),
+                              Row(
+                                children: [
+                                  Text(
+                                    'acyl.Acyl Transfer Agents',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 70,
+                                  ),
+                                  Text(
+                                    'YES',
+                                    style: TextStyle(
+                                      color: Colors.red,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Divider(),
+                              Row(
+                                children: [
+                                  Text(
+                                    'SN2.SN2-Nucleophilic\nAliphatic Substitution',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 70,
+                                  ),
+                                  Text(
+                                    'YES',
+                                    style: TextStyle(
+                                      color: Colors.red,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Divider(),
+                            ],
+                          ),
+                        )
+                      ],
+                      textColor: Colors.white,
+                      title: Text(
+                        'Protein Binding',
+                        style: TextStyle(fontSize: 24, color: Colors.white),
+                      ),
+                      collapsedIconColor: Colors.white,
+                      backgroundColor: Colors.blueGrey.shade900,
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
