@@ -66,69 +66,53 @@ class BuildContainer extends StatefulWidget {
 class _BuildContainer extends State<BuildContainer> {
   _BuildContainer();
 
-  bool isOpen = false;
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15),
-            color: Colors.blueGrey.shade900,
-          ),
-          margin: EdgeInsets.symmetric(vertical: 2),
-          padding: EdgeInsets.fromLTRB(25, 20, 20, 20),
-          width: double.infinity,
-          alignment: Alignment.centerLeft,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return Padding(
+      padding: const EdgeInsets.all(10),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(15),
+        child: Container(
+          color: Colors.blueGrey.shade900,
+          child: ExpansionTile(
+            iconColor: Colors.amber,
+            expandedCrossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                width: MediaQuery.of(context).size.width * .70,
-                child: SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Text(
-                      widget.title,
-                      overflow: TextOverflow.fade,
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.white,
+              Padding(
+                padding: const EdgeInsets.only(right: 10, left: 5),
+                child: Row(
+                  children: [
+                    Icon(
+                      FontAwesomeIcons.vial,
+                      color: Colors.amber,
+                    ),
+                    Expanded(
+                      child: Divider(
+                        color: Colors.amber,
                       ),
-                    )),
+                    ),
+                  ],
+                ),
               ),
-              InkWell(
-                onTap: () {
-                  setState(() {
-                    isOpen = !isOpen;
-                  });
-                },
-                child: Icon(
-                  isOpen
-                      ? FontAwesomeIcons.chevronUp
-                      : FontAwesomeIcons.chevronDown,
-                  color: Colors.white,
+              Padding(
+                padding: const EdgeInsets.only(left: 10, bottom: 10, top: 5),
+                child: Text(
+                  'Some random data',
+                  textAlign: TextAlign.start,
+                  style: TextStyle(fontSize: 20, color: Colors.white),
                 ),
               )
             ],
+            textColor: Colors.white,
+            title: Text(
+              '${widget.title}',
+              style: TextStyle(fontSize: 24, color: Colors.white),
+            ),
+            collapsedIconColor: Colors.white,
+            backgroundColor: Colors.blueGrey.shade900,
           ),
         ),
-        isOpen
-            ? Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(1),
-                ),
-                width: MediaQuery.of(context).size.width,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'Some random data ',
-                    style: TextStyle(fontSize: 27),
-                  ),
-                ),
-              )
-            : Text('')
-      ],
+      ),
     );
   }
 }

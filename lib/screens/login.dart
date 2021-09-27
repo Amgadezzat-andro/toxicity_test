@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:toxicity_test/screens/sign.dart';
 import 'package:toxicity_test/screens/start_screen.dart';
 import 'package:provider/provider.dart';
@@ -90,6 +91,7 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
+  bool isPasswordShown = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -160,13 +162,25 @@ class _LoginScreenState extends State<LoginScreen> {
                                     Icons.lock_open_outlined,
                                     color: Colors.grey,
                                   ),
-                                  suffixIcon: Icon(
-                                    Icons.remove_red_eye_outlined,
-                                    color: Colors.grey,
+                                  suffixIcon: InkWell(
+                                    onTap: () {
+                                      setState(() {
+                                        isPasswordShown = !isPasswordShown;
+                                        print(isPasswordShown);
+                                      });
+                                    },
+                                    child: Icon(
+                                      isPasswordShown
+                                          ? FontAwesomeIcons.eyeSlash
+                                          : FontAwesomeIcons.eye,
+                                      color: isPasswordShown
+                                          ? Colors.redAccent.shade200
+                                          : Colors.greenAccent.shade200,
+                                    ),
                                   ),
                                 ),
                                 keyboardType: TextInputType.emailAddress,
-                                obscureText: true,
+                                obscureText: !isPasswordShown,
                                 controller: _passwordController,
                                 validator: (val) {
                                   if (val.isEmpty || val.length < 5) {
@@ -181,6 +195,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                             Container(
                               alignment: Alignment.bottomRight,
+                              padding: EdgeInsets.only(top: 10),
                               child: ElevatedButton(
                                 child: Text(
                                   'Forget Password?',
@@ -191,7 +206,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ),
                                 style: ElevatedButton.styleFrom(
                                   primary: Colors.white,
-                                  elevation: 20,
+                                  elevation: 5,
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(25),
                                   ),

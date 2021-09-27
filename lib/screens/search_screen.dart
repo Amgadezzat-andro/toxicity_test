@@ -6,6 +6,7 @@ import 'package:provider/provider.dart';
 import 'package:toxicity_test/data/someappdata.dart';
 import 'package:toxicity_test/providers/search_screen_provider.dart';
 
+// ignore: must_be_immutable
 class SearchScreen extends StatelessWidget {
   SearchScreen({this.title});
   String title;
@@ -19,8 +20,13 @@ class SearchScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0,
         centerTitle: true,
-        leading: Image(
-          image: AssetImage('assets/img/logo.png'),
+        leading: InkWell(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Image(
+            image: AssetImage('assets/img/logo.png'),
+          ),
         ),
         title: Text(
           title,

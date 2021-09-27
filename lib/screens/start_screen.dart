@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:toxicity_test/main.dart';
 import 'package:toxicity_test/providers/auth.dart';
 import 'package:toxicity_test/screens/login.dart';
 import 'package:toxicity_test/screens/search_screen.dart';
@@ -33,7 +32,9 @@ class StartScreen extends StatelessWidget {
 
 Scaffold start(context) {
   return Scaffold(
-    appBar: AppBar(),
+    appBar: AppBar(
+      backgroundColor: Colors.black45,
+    ),
     drawer: AppDrawer(),
     body: Center(
       child: Column(
