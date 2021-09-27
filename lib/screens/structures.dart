@@ -217,7 +217,7 @@ class StructureAttribScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Text(
-                    'Toxtree modules',
+                    'Toxicity modules',
                     style: TextStyle(
                       fontSize: 25,
                       color: Colors.black,

@@ -20,7 +20,7 @@ class BuildList extends StatelessWidget {
         ),
         backgroundColor: Colors.white,
         title: Text(
-          'Toxtree modules (0/15)',
+          'Toxicity Test',
           style: TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.bold,
