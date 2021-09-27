@@ -10,15 +10,10 @@ class AppDrawer extends StatelessWidget {
       child: Column(
         children: [
           AppBar(
-<<<<<<< HEAD
-            title: Text('Hello Friend!'),
-            automaticallyImplyLeading: false,
-=======
     backgroundColor:Colors.black45,
             title: Text('Hello Friend!'),
             automaticallyImplyLeading: false,
           
->>>>>>> upstream/master
           ),
           Divider(),
           ListTile(

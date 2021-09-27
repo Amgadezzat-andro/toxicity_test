@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:toxicity_test/providers/auth.dart';
 import 'package:toxicity_test/screens/login.dart';
 import 'package:toxicity_test/screens/search_screen.dart';
-import 'package:toxicity_test/widgets/app_drawer';
+import 'package:toxicity_test/widgets/app_drawer.dart';
 
 class StartScreen extends StatelessWidget {
   @override
