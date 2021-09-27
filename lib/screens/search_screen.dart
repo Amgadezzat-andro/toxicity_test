@@ -47,71 +47,73 @@ class SearchScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Container(
-                        width: MediaQuery.of(context).size.width * .70,
-                        height: 50,
-                        child: TypeAheadFormField<String>(
-                            suggestionsBoxController: su,
-                            textFieldConfiguration: TextFieldConfiguration(
-                                cursorColor: Colors.white,
-                                controller: editingController,
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold),
-                                decoration: InputDecoration(
-                                  focusColor: Colors.blueGrey.shade300,
-                                  fillColor: Colors.blueGrey.shade300,
-                                  filled: true,
-                                )),
-                            onSuggestionSelected: (vl) {
-                              editingController.text = vl;
-                            },
-                            itemBuilder: (_, str) {
-                              return Container(
-                                color: Colors.black54,
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Text(
-                                        str,
-                                        style: TextStyle(fontSize: 18),
-                                      ),
-                                    ),
-                                    Divider()
-                                  ],
-                                ),
-                              );
-                            },
-                            suggestionsCallback: (st) {
-                              return Drug().getDrugsName(st);
-                            })),
-                    ElevatedButton.icon(
-                        style: ElevatedButton.styleFrom(
-                            primary: Colors.white, elevation: 0),
-                        label: Text(''),
-                        onPressed: () {
-                          context.read<SearchScreenProvider>().addSearchResult(
-                              Drug()
-                                  .getDrugInfoFromName(editingController.text));
+                      width: MediaQuery.of(context).size.width * .70,
+                      height: 50,
+                      child: TypeAheadFormField<String>(
+                        suggestionsBoxController: su,
+                        textFieldConfiguration: TextFieldConfiguration(
+                          cursorColor: Colors.white,
+                          controller: editingController,
+                          style: TextStyle(
+                              color: Colors.black, fontWeight: FontWeight.bold),
+                          decoration: InputDecoration(
+                            focusColor: Colors.blueGrey.shade300,
+                            fillColor: Colors.blueGrey.shade300,
+                            filled: true,
+                          ),
+                        ),
+                        onSuggestionSelected: (vl) {
+                          editingController.text = vl;
                         },
-                        icon: Icon(
-                          FontAwesomeIcons.search,
-                          color: Colors.black,
-                        )),
+                        itemBuilder: (_, str) {
+                          return Container(
+                            color: Colors.black54,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                    str,
+                                    style: TextStyle(fontSize: 18),
+                                  ),
+                                ),
+                                Divider()
+                              ],
+                            ),
+                          );
+                        },
+                        suggestionsCallback: (st) {
+                          return Drug().getDrugsName(st);
+                        },
+                      ),
+                    ),
+                    ElevatedButton.icon(
+                      style: ElevatedButton.styleFrom(
+                          primary: Colors.white, elevation: 0),
+                      label: Text(''),
+                      onPressed: () {
+                        context.read<SearchScreenProvider>().addSearchResult(
+                            Drug().getDrugInfoFromName(editingController.text));
+                      },
+                      icon: Icon(
+                        FontAwesomeIcons.search,
+                        color: Colors.black,
+                      ),
+                    ),
                   ],
                 ),
               ),
               Container(
-                  height: MediaQuery.of(context).size.height * .74,
-                  width: double.infinity,
-                  color: Colors.black26,
-                  child: SingleChildScrollView(
-                    child: Column(
-                      children:
-                          context.watch<SearchScreenProvider>().searchBody,
-                    ),
-                  ))
+                height: MediaQuery.of(context).size.height * .74,
+                width: double.infinity,
+                color: Colors.black26,
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: context.watch<SearchScreenProvider>().searchBody,
+                  ),
+                ),
+              )
             ],
           ),
         ),

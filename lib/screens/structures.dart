@@ -14,34 +14,178 @@ class StructureAttribScreen extends StatelessWidget {
     return Container(
       color: Colors.white,
       child: Center(
+
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Divider(
-              color: Colors.black,
-            ),
-            Text(
-              'Available structur attribute :',
-              softWrap: false,
-              overflow: TextOverflow.fade,
-              style: TextStyle(
-                fontSize: 25,
-                color: Colors.black,
-                fontWeight: FontWeight.w400,
-              ),
-            ),
-            Divider(
-              color: Colors.black,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 2, bottom: 40, left: 3),
-              child: RichText(
-                  text: TextSpan(
-                      text:
-                          'Some rich Text !! Pellentesque ac nisi bibendum sapien feugiat mattis eu et velit. Nunc est leo, sodales sed nisl sed, egestas blandit arcu. In id tristique purus. Nulla facilisi.',
-                      style: TextStyle(color: Colors.black, fontSize: 18))),
-            ),
+            drugName=='C(=O)Cl'?
+            Column(
+              children: [
+                Divider(color: Colors.black),
+                Text(
+                  'Available Structure Attribute :',
+                  softWrap: false,
+                  overflow: TextOverflow.fade,
+                  style: TextStyle(
+                    fontSize: 25,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                Divider(color: Colors.black),
+                Padding(
+                  padding: const EdgeInsets.only(top: 2, bottom: 40, left: 3),
+                  child: Column(
+                    children: [
+                      Center(
+                        child: Container(
+                          margin: EdgeInsets.all(20),
+                          child: Table(
+                            defaultColumnWidth: FixedColumnWidth(180.0),
+                            border: TableBorder.all(
+                                color: Colors.black,
+                                style: BorderStyle.solid,
+                                width: 2),
+                            children: [
+                              TableRow(
+                                children: [
+                                  Column(
+                                    children: [
+                                      Text('CasRN',
+                                          style: TextStyle(fontSize: 18.0))
+                                    ],
+                                  ),
+                                  Column(
+                                    children: [
+                                      Text(
+                                        '68476-03-9',
+                                        style: TextStyle(fontSize: 18.0),
+                                      )
+                                    ],
+                                  ),
+                                ],
+                              ),
+                              TableRow(
+                                children: [
+                                  Column(
+                                    children: [
+                                      Text(
+                                        'EC number',
+                                        style: TextStyle(fontSize: 18.0),
+                                      ),
+                                    ],
+                                  ),
+                                  Column(
+                                    children: [
+                                      Text(
+                                        '270-664-6',
+                                        style: TextStyle(fontSize: 18.0),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                              TableRow(
+                                children: [
+                                  Column(
+                                    children: [
+                                      Text(
+                                        'Names',
+                                        style: TextStyle(
+                                          fontSize: 18.0,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Column(
+                                    children: [
+                                      Text(
+                                        'Fatty acids, montan-wax|MONTAN ACID WAX',
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(fontSize: 14.0),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                              TableRow(
+                                children: [
+                                  Column(
+                                    children: [
+                                      Text(
+                                        'SMILESO',
+                                        style: TextStyle(
+                                          fontSize: 18.0,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Column(
+                                    children: [
+                                      Text(
+                                        'C(Cc1occc1)Cl',
+                                        style: TextStyle(fontSize: 18.0),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                              TableRow(
+                                children: [
+                                  Column(
+                                    children: [
+                                      Text(
+                                        'Std. InChI key',
+                                        style: TextStyle(
+                                          fontSize: 18.0,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Column(
+                                    children: [
+                                      Text(
+                                        'GUSVHTGHWCRLNP-UHFFFAOYSA-N',
+                                        style: TextStyle(fontSize: 14.0),
+                                        textAlign: TextAlign.center,
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                              TableRow(
+                                children: [
+                                  Column(
+                                    children: [
+                                      Text(
+                                        'Std. InChIInChI',
+                                        style: TextStyle(
+                                          fontSize: 18.0,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Column(
+                                    children: [
+                                      Text(
+                                        '1S/C6H5ClO2/c7-6(8)4-5-2-1-3-9-5/h1-3H,4H2',
+                                        style: TextStyle(fontSize: 14.0),
+                                        textAlign: TextAlign.center,
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ):Container(),
             Divider(
               color: Colors.black,
             ),

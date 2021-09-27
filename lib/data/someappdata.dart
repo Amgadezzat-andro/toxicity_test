@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
 class Drug {
+
   var _infos = <Map<dynamic, dynamic>>[
     {
       'drugName': 'Ethanol',
@@ -13,9 +14,16 @@ class Drug {
     {
       'drugName': 'Sulfuric acid',
       'structure_diagram': AssetImage('assets/img/h2so4.png')
+    },
+    {
+      'drugName': 'C(=O)Cl',
+      'structure_diagram':AssetImage('assets/img/cequal.jpg')
     }
   ];
+
+
   List<Map> getDrugInfo() => _infos;
+  
   Map<dynamic, dynamic> getDrugInfoFromName(String drugName) => _infos
       .where((element) => element['drugName'] == drugName)
       .toList()
